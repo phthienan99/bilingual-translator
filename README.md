@@ -26,7 +26,7 @@ The current Docker default uses Parakeet TDT 0.6B v2 int8 for English speech rec
 - Docker Hub repository: `phthienan99/bilingual-translator`
 - Peer-trial evidence: [PEER_TRIAL.md](PEER_TRIAL.md) and `evidence/peer-trials/` in the submission ZIP
 
-The public repository is https://github.com/phthienan99/bilingual-translator. The GitHub Pages URL will be added after Pages is enabled and verified.
+The public repository is https://github.com/phthienan99/bilingual-translator. The GitHub Pages site is https://phthienan99.github.io/bilingual-translator/
 
 See [RELEASE.md](RELEASE.md), [PEER_TRIAL.md](PEER_TRIAL.md), [VALIDATION.md](VALIDATION.md), and the article draft in [docs/index.html](docs/index.html).
 
