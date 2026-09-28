@@ -20,19 +20,19 @@ The current Docker default uses Parakeet TDT 0.6B v2 int8 for English speech rec
 
 ## Release links
 
-- Public GitHub repository: **add the final public repository URL before submission**
-- GitHub Pages article: **add the final Pages URL before submission**
+- Public GitHub repository: https://github.com/phthienan99/bilingual-translator
+- GitHub Pages article: https://phthienan99.github.io/bilingual-translator/
 - Docker Hub image: `phthienan99/bilingual-translator:v72-web`
 - Docker Hub repository: `phthienan99/bilingual-translator`
 - Peer-trial evidence: [PEER_TRIAL.md](PEER_TRIAL.md) and `evidence/peer-trials/` in the submission ZIP
 
-The public repository and Pages URL are intentionally left as editable placeholders until the team's final URLs are confirmed.
+The public repository and Pages URL above are the final published destinations used for this submission.
 
 See [RELEASE.md](RELEASE.md), [PEER_TRIAL.md](PEER_TRIAL.md), [VALIDATION.md](VALIDATION.md), and the article draft in [docs/index.html](docs/index.html).
 
 ## License and credits
 
-Original application: ADI205 Group 1. The team built independent prototypes and combined their strengths, rather than assigning fixed roles. Each member's prototype and adopted improvements, along with approved names, must be confirmed before publication. The supplied source had no explicit project-wide license; no new open-source license is asserted here. Team members should agree on a source-code license before publishing.
+Original application: ADI205 Group 1. The team built independent prototypes and combined their strengths, rather than assigning fixed roles. Individual contributions and approved public names are recorded in `CONTRIBUTIONS.md`. The supplied source had no explicit project-wide license; no new open-source license is asserted here. This coursework repository therefore does not claim an open-source license.
 
 Third-party code and models retain their own licenses. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). In particular, Qwen2.5-3B has a Qwen research license and NLLB-200-distilled-600M has a CC-BY-NC-4.0 model license; this is an academic prototype, not an unrestricted commercial product. Check the upstream terms before redistributing weights. This Dockerfile downloads models at runtime rather than bundling their weights.
 

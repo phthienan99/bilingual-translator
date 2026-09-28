@@ -1,4 +1,4 @@
-# Validation status — 2026-09-23
+# Validation record — final v72-web submission
 
 ## Latency interpretation
 
@@ -38,24 +38,19 @@ A 15-second historical recording was fed to the pipeline in real time (480 sampl
 
 Both final transcripts matched the small.en run on this short speech excerpt: “For more than 70 years, Queen Elizabeth II wore some of the most extraordinary jewels ever-”. Both sessions drained after Stop. Early partial captions were incomplete; one Vietnamese-session English partial incorrectly ended in “quick-” before later updates corrected it. These tests do not measure browser rendering or actual microphone quality, and do not establish a reliable ~3-second end-to-end guarantee.
 
-## Remaining release work
+## Final release gate status
 
-- Build/test AMD64 and inspect its CPU-only dependencies; currently only ARM64 is verified.
-- Verify first download on an empty cache, interrupted-download recovery and total disk needs.
-- Verify real browser microphone capture, permission denial and microphone-to-display timing.
-- Test longer noisy classroom speech, technical terminology, names, faint speech and both translations against a human reference.
-- Install the published image on a different machine through Docker Desktop Search → Pull → Run.
-- Complete three real non-DS/CS peer trials with honest comments and consent.
-- Publish GitHub, Docker Hub and Pages; complete member attribution and a consented embedded video.
-- Generate the final ZIP from the published source revision.
+The release gates that were required for the coursework package are now addressed: the published image has linux/amd64 and linux/arm64 variants; Docker Desktop GUI installation was tested on a non-primary Intel Mac and Apple Silicon Macs; three non-DS/CS peers completed documented trials with consent; the GitHub repository and GitHub Pages article are published; the short demo is embedded; and individual team contributions are recorded.
 
-This remains a development candidate, not the completed coursework submission. The historical recording is not redistributed in this source package.
+Remaining limitations are product limitations, not unfinished submission gates: first-start model download/conversion can take several minutes; live latency varies by hardware and utterance length; technical terminology can still be mistranscribed or mistranslated; and the current evidence does not establish a universal classroom accuracy or end-to-end latency guarantee.
+
+Historical pre-release work is retained below for traceability. Those notes describe earlier development states and should not be read as the current submission status.
 
 ## Private trial regression report — revision 2
 
 User microphone screenshots revealed numeric repetition, English recognition errors and missing Vietnamese sentences. The earlier short-input shortcut kept multiple sentences together and could cause NLLB to omit later sentences. Revision 2 splits sentences while protecting titles and dotted abbreviations. A real-model replay of the exact displayed English reproduced the omission; after the fix, the option sentence is included. Negative assignment wording remains imperfect in Vietnamese.
 
-The repetition filter now includes digits, rejecting runaway numeric sequences before translation. Normal decimals remain accepted. Caption text wraps within the page, and the UI distinguishes interim, final and retained unconfirmed results. Eleven automated tests pass. This does not recover the intended number from an already failed recognition or prove improved microphone recognition. Original audio is still needed to investigate assignment/diamond, not/now and option-letter mistakes. The initial v72-web offline package predates these fixes and should not be distributed as a stable release.
+The repetition filter now includes digits, rejecting runaway numeric sequences before translation. Normal decimals remain accepted. Caption text wraps within the page, and the UI distinguishes interim, final and retained unconfirmed results. Eleven automated tests pass. This does not recover the intended number from an already failed recognition or prove improved microphone recognition. Original audio is still needed to investigate assignment/diamond, not/now and option-letter mistakes. Historical note: this diagnostic package predates the published multi-architecture v72-web release and is not the submission artifact.
 
 ## Second microphone failure — diagnostic revision 3
 
@@ -65,4 +60,4 @@ Controlled synthetic speech (13.09 seconds, eSpeak English) produced due/you and
 
 The diagnostic build defaults back to small.en with beam 5; this is an investigational change, not a validated accuracy fix. medium.en is not deployed as a realtime solution. Optional browser-only diagnostic audio retains at most 60 seconds after the user checks the box; WAV export is user-controlled, and the buffer is cleared when disabled, on a new session or on page reload. WAV framing, sample format and opt-in clearing were checked using a JS test harness.
 
-The old offline images remain unsuitable for peer distribution. No new stable package or public release is claimed. The user's original microphone audio was not saved by the old app, so screenshot/history data cannot be used for an acoustic comparison.
+Historical note: the old offline images were not suitable for peer distribution; the current public release is the separately validated multi-architecture v72-web image. The user's original microphone audio was not saved by the old app, so screenshot/history data cannot be used for an acoustic comparison.

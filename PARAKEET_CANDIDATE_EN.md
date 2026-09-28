@@ -1,6 +1,6 @@
-# Parakeet web candidate — 2026-09-24 update
+# Historical development note — Parakeet web candidate (superseded)
 
-Private testing candidate, not a stable release. Local URL: http://localhost:8004.
+Historical private testing candidate. This document records an earlier candidate and is not the current release instruction. Local URL at the time: http://localhost:8004.
 
 ## Run this version
 
@@ -30,4 +30,6 @@ The attempted new synthetic speech fixture contained no usable audio and is excl
 
 The standard Dockerfile builds dependencies from requirements.txt; run with STT_ENGINE=parakeet. Dockerfile.parakeet-local is a faster build using the probe image in the old handoff and defaults to Parakeet. It explicitly clears the probe image shell entrypoint.
 
-Next: test fresh speech in the browser; measure time to correct interim words, not merely first output; verify 45-second boundaries and quiet microphones; improve remaining translations; avoid loading unused Qwen; perform three independent peer installations/trials with real consent and contributions. Keep publication paused until the owner approves a stable private release. Do not publish recordings. Source/image archives contain no private audio or caption history.
+Historical next steps at that time included browser testing, latency measurement, translation improvements and independent peer trials. Those gates were subsequently addressed for the published v72-web coursework release. No private recordings are included in this package.
+
+> **Status:** Historical development notes retained for traceability. They describe earlier candidate/diagnostic states and are **not** the current submission instructions or release status. Use `README.md`, `SETUP.md`, `PEER_TRIAL.md`, `CONTRIBUTIONS.md`, and the published `v72-web` release as the current record.

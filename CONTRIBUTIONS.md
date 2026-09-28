@@ -2,23 +2,25 @@
 
 ## Confirmed working method
 
-Each team member first developed an independent prototype. The group then compared these versions and combined their strengths into a shared application. Work was not divided into fixed roles such as one coder, one tester and one writer.
+The team developed the project through independent work and then combined the useful parts into the shared application. The public attribution below names the actual contributions without assigning invented fixed roles.
 
-This process should be described consistently in the portfolio and report. It still needs individual attribution: independent development is a contribution, and adopted improvements should be credited to their actual author.
+## Individual contributions
 
-## Complete one entry per member
+### Tianlu
+- Built the local-host version/environment used as the local development and testing base.
+- Supporting evidence: the local-host application and the shared project history.
 
-- Approved public name:
-- Independent prototype or version:
-- What that version did particularly well:
-- Improvement adopted into the shared project, if any:
-- Other actual contribution to comparison, integration, testing or packaging:
-- Supporting file, screenshot or commit:
+### An Pham (Sabrina)
+- Integrated the LLM functionality into the shared translator workflow.
+- Handled Docker packaging/publishing for the shared release.
+- Pushed and maintained the project in Git/GitHub for the shared submission.
 
-An improvement does not have to be adopted for the prototype to count as work. Describe unsuccessful experiments honestly; do not invent a fixed role or claim that everyone wrote the final code.
+### Keyan
+- Recruited and coordinated testing with peers outside DS/CS.
+- Helped arrange the required peer trials and collect their usage feedback.
 
-## Suggested portfolio wording
+**Name consistency:** An Pham and Sabrina refer to the same team member; Sabrina is not a separate member.
 
-“Our team began with independent prototypes rather than a fixed division of roles. Each member explored the full translation workflow. We compared the versions, discussed their strengths and limitations, and combined selected improvements into the shared application.”
+## Portfolio wording
 
-Follow this paragraph with the completed individual entries before submission. The current archive alone does not establish each person's name or authorship.
+“Our team developed the project through independent work and then combined useful parts into the shared application. Tianlu built the local-host version/environment. An Pham (Sabrina) integrated the LLM functionality and handled Docker packaging/publishing and Git/GitHub integration. Keyan recruited and coordinated testing with peers outside DS/CS.”

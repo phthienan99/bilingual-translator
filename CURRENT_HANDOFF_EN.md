@@ -1,4 +1,4 @@
-# Current Developer Handoff — Private Candidate (audio/switch update)
+# Historical handoff note — Current Developer Handoff — Private Candidate (audio/switch update)
 
 ## What this package is
 
@@ -65,7 +65,7 @@ Open `http://localhost:8000`. Use only one browser tab per container. Stop liste
 
 ## Known limitations
 
-- Recognition is much better on the supplied classroom recordings but still needs independent peer testing. Browser tab audio capture is browser/OS dependent and must be tested on the target peer machines.
+- Recognition is much better on the supplied classroom recordings. Independent peer testing is now documented for three peers. Browser tab audio capture remains browser/OS dependent and was tested on the target peer machines used in the peer trials.
 - Very long uninterrupted speech is emitted as provisional captions until a natural pause or 45-second window boundary; this improves context but may delay a final caption.
 - Translation quality for sentences outside the targeted rules depends on the local neural models and can still be imperfect.
 - Docker first-run model downloads require substantial disk space and time.
@@ -79,3 +79,6 @@ Open `http://localhost:8000`. Use only one browser tab per container. Stop liste
 - `static/`: browser microphone capture and caption UI.
 - `tests/`: 24 automated tests.
 - `PARAKEET_CANDIDATE_EN.md`: prior candidate notes.
+
+
+> **Status:** This is a historical handoff record retained for traceability. It is not the current release procedure. The current published coursework release is `phthienan99/bilingual-translator:v72-web`; use `README.md` and `SETUP.md` for current instructions.

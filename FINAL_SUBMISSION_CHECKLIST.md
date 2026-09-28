@@ -20,10 +20,10 @@
 
 A fresh container may take several minutes before the app is ready because local AI models are downloaded, converted and warmed up. This is documented in `SETUP.md`. This startup delay is separate from the normal live-caption latency target.
 
-## Before course submission
+## Submission state
 
-1. Insert the final public GitHub repository URL in `README.md` and the Pages article.
-2. Insert the final GitHub Pages URL.
-3. Add the approved short demo video to the Pages article and verify playback.
-4. Confirm final team attribution/contribution wording and public-use consent for anything shown on the Pages site.
-5. Push the exact reviewed source tree to GitHub, then make the submission ZIP from that same final commit.
+1. Final public GitHub repository URL is present in `README.md` and the Pages article.
+2. Final GitHub Pages URL is present.
+3. The approved short demo video is embedded in the Pages article.
+4. Final team attribution is recorded in `CONTRIBUTIONS.md` and the Pages article; named peer evidence includes consent.
+5. The reviewed source tree is the basis of the submission ZIP.

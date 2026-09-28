@@ -1,4 +1,4 @@
-# Private improvement update — 2026-09-26
+# Historical development note — improvement update (superseded)
 
 This revision builds on the current Parakeet handoff. It does not claim stable release status.
 
@@ -16,3 +16,5 @@ This revision builds on the current Parakeet handoff. It does not claim stable r
 ## Validation status
 
 The change is source-level and requires a rebuilt image. The Docker image cannot be rebuilt in this analysis environment because Docker Desktop is not available here. It does not by itself prove microphone accuracy, video-audio capture, or a three-second end-to-end latency guarantee.
+
+> **Status:** Historical development notes retained for traceability. They describe earlier candidate/diagnostic states and are **not** the current submission instructions or release status. Use `README.md`, `SETUP.md`, `PEER_TRIAL.md`, `CONTRIBUTIONS.md`, and the published `v72-web` release as the current record.

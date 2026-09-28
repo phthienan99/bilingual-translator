@@ -9,13 +9,14 @@
 - Apple Silicon/Safari peer: Yuqing — PASS after retest
 - Peer evidence: `PEER_TRIAL.md` and `evidence/peer-trials/`
 
-## Still required before course submission
+## Final publication state
 
-- Replace the editable GitHub repository placeholder in `README.md` with the final public URL.
-- Replace the GitHub Pages placeholder with the final public URL.
-- Publish/verify the approved short demo video and embed it in `docs/index.html`.
-- Confirm final team member attribution and public-use consent for anything shown on the Pages site.
-- Make the ZIP from the exact final source tree that is pushed to GitHub.
+- Final public GitHub repository: `https://github.com/phthienan99/bilingual-translator`
+- Final GitHub Pages article: `https://phthienan99.github.io/bilingual-translator/`
+- Approved short demo video is embedded in `docs/index.html`.
+- Final team attribution is recorded in `CONTRIBUTIONS.md` and on the Pages article.
+- Named peer evidence includes recorded consent.
+- The source ZIP is the reviewed backup copy for submission.
 
 ## Evidence policy
 
