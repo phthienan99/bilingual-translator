@@ -1,0 +1,13 @@
+services:
+  translator:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      CPU_THREADS: "4"
+    volumes:
+      - models:/home/app/models
+      - captions:/home/app/data
+volumes:
+  models:
+  captions:

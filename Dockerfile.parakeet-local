@@ -1,0 +1,8 @@
+FROM bilingual-translator:parakeet-probe
+WORKDIR /app
+COPY src/ ./src/
+COPY static/ ./static/
+USER app
+ENV STT_ENGINE=parakeet
+ENTRYPOINT []
+CMD ["waitress-serve", "--host=0.0.0.0", "--port=8000", "--threads=8", "--call", "src.entrypoint:create_app"]

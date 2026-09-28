@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live Bilingual Classroom Translator</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="eyebrow">ENGLISH → 中文 / TIẾNG VIỆT</div>
+    <div class="hero-row">
+      <div>
+        <h1>Keep up with the conversation.</h1>
+        <p class="lede">Live English captions with local Chinese or Vietnamese translation. Audio stays inside this Docker container.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="control-card">
+    <div class="section-head">
+      <div>
+        <span class="section-kicker">1 · INPUT</span>
+        <h2>Start a live session</h2>
+      </div>
+      <span id="statusPill" class="status-pill">Ready</span>
+    </div>
+
+    <div class="controls-grid">
+      <label>Translate into
+        <select id="language"><option>Chinese</option><option>Vietnamese</option></select>
+      </label>
+      <label>Audio source
+        <select id="audioSource">
+          <option value="microphone">Microphone</option>
+          <option value="tab">Browser tab / video audio</option>
+          <option value="both">Microphone + browser tab audio</option>
+        </select>
+      </label>
+      <div class="button-row">
+        <button id="start" class="primary">Start listening</button>
+        <button id="stop" class="secondary" disabled>Stop</button>
+      </div>
+    </div>
+
+    <div class="status-box">
+      <p id="status" role="status">Ready. First start loads local models; this may take several minutes.</p>
+      <p id="captureStatus" role="status"><strong>Audio capture off.</strong></p>
+      <label class="meter-label">Microphone / audio level <meter id="level" min="0" max="100" value="0"></meter></label>
+      <p id="error" role="alert"></p>
+    </div>
+
+
+    <details class="audio-help">
+      <summary>Audio setup & video instructions</summary>
+      <div class="help-grid">
+        <p><strong>Microphone:</strong> allow browser microphone access and speak normally.</p>
+        <p><strong>Video on this laptop:</strong> choose <strong>Browser tab / video audio</strong>, then select the tab containing the video and enable <strong>Share tab audio</strong> in Chrome/Edge.</p>
+        <p><strong>Both:</strong> use <strong>Microphone + browser tab audio</strong> when you need the speaker and video audio together.</p>
+        <p><strong>Headphones:</strong> microphone mode cannot hear audio that is only playing through headphones. Use tab-audio capture for browser video.</p>
+      </div>
+    </details>
+
+    <div class="diagnostic-row">
+      <label><input type="checkbox" id="keepAudio"> Save diagnostic audio in this browser (optional)</label>
+      <span id="diagnosticDuration">No diagnostic audio saved.</span>
+      <button id="audioDownload" class="link-button" disabled>Download diagnostic audio</button>
+    </div>
+  </section>
+
+  <section class="caption-card">
+    <div class="section-head">
+      <div>
+        <span class="section-kicker">2 · LIVE</span>
+        <h2>Live captions</h2>
+      </div>
+      <span class="live-indicator"><i></i> LIVE</span>
+    </div>
+    <p class="caption-help">Interim captions may change. Final captions are the current accepted result; check important names, numbers, and technical terms.</p>
+    <div id="captions" aria-live="polite" class="caption-list">Your captions will appear here.</div>
+  </section>
+
+  <section class="history-card">
+    <details>
+      <summary><span><span class="section-kicker">3 · HISTORY</span><strong>Full session history</strong></span></summary>
+      <div id="history"></div>
+      <button id="download" disabled>Download history</button>
+    </details>
+  </section>
+
+  <footer>
+    <span>Local-only browser session · Stop listening before closing the tab.</span>
+  </footer>
+</main>
+<script>
+(()=>{const isSafari=/Safari/i.test(navigator.userAgent)&&!/Chrome|Chromium|Edg/i.test(navigator.userAgent);const n=document.getElementById('browserNotice');if(isSafari&&n){n.hidden=false;n.textContent='Safari may handle microphone capture differently. Chrome or Edge is recommended for the most reliable live audio capture.';}})();
+</script>
+<script src="/static/app.js"></script>
+</body>
+</html>

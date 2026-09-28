@@ -1,0 +1,12 @@
+.git
+work
+__pycache__
+*.zip
+*.mp4
+*.csv
+.env*
+.venv
+data
+models
+docs
+tests
